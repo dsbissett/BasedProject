@@ -29,11 +29,7 @@ namespace Based.Business.Customers
         /// </summary>
         static CustomerLogic()
         {
-            Mapper.CreateMap<IDetail, ICustomerDto>();
-            Mapper.CreateMap<Detail, CustomerDto>();
-            Mapper.CreateMap<Detail, ICustomerDto>();
-            Mapper.CreateMap<Detail, List<CustomerDto>>();
-            Mapper.CreateMap<List<Detail>, List<CustomerDto>>();
+            Mapper.CreateMap<Detail, CustomerDto>();            
         }
 
         /// <summary>
@@ -52,7 +48,7 @@ namespace Based.Business.Customers
                     return null;
                 }
 
-                var result = Mapper.Map<ICustomerDto>(query);
+                var result = Mapper.Map<CustomerDto>(query);
 
                 return result;
             }
@@ -90,7 +86,7 @@ namespace Based.Business.Customers
             var list = query.Skip((pageSize * pageNumber) - pageSize).Take(pageSize).ToList();
 
             // Map dbo to DTO
-            var results = Mapper.Map<List<ICustomerDto>>(list);
+            var results = Mapper.Map<List<CustomerDto>>(list);
 
             // Return custom object
             return new CustomerPage
