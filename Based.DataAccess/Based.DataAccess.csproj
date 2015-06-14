@@ -63,13 +63,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Contexts\DemoDb.cs" />
+    <Compile Include="Config\DemoDbConfiguration.cs" />
+    <Compile Include="Contexts\DemoDbContext.cs" />
+    <Compile Include="Contexts\DemoDbMigrationHistoryTableContext.cs" />
     <Compile Include="DetailRepository.cs" />
     <Compile Include="InjectorModule.cs" />
     <Compile Include="Interfaces\IDetailRepository.cs" />
+    <Compile Include="Migrations\201506140204176_Initial.cs" />
+    <Compile Include="Migrations\201506140204176_Initial.Designer.cs">
+      <DependentUpon>201506140204176_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506140207503_CreateDetailTable.cs" />
+    <Compile Include="Migrations\201506140207503_CreateDetailTable.Designer.cs">
+      <DependentUpon>201506140207503_CreateDetailTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Detail.cs" />
     <Compile Include="Interfaces\IDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schemas\DemoDbMigrationHistorySchema.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -77,6 +89,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="tmp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201506140204176_Initial.resx">
+      <DependentUpon>201506140204176_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506140207503_CreateDetailTable.resx">
+      <DependentUpon>201506140207503_CreateDetailTable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

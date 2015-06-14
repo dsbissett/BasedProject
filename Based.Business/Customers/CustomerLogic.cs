@@ -5,7 +5,6 @@ using System.Linq;
 using AutoMapper;
 using Based.Business.Core;
 using Based.Business.Interfaces;
-using Based.DataAccess.Interfaces;
 using Based.DataAccess.Models;
 using SharpRepository.Repository;
 
@@ -68,7 +67,8 @@ namespace Based.Business.Customers
         public ICustomerPage GetPage(int pageNumber, int pageSize)
         {
             // Sort list..
-            var query = details.AsQueryable().OrderBy(x => x.Id);
+            //var query = details.AsQueryable().OrderBy(x => x.Id);
+            var query = details.AsQueryable().OrderBy(x => x.Id).Skip((pageSize * pageNumber) - pageSize).Take(pageSize).ToList();
 
             // Get total count..
             var totalCount = query.Count();
@@ -83,10 +83,10 @@ namespace Based.Business.Customers
             // Assume:  pageSize = 10, pageNumber = 2, totalRecords = 20
             // ex:  (10 * 2) = 20, 20 records will be skipped and is incorrect.
             //      (10 * 2) = 20, subract 10 = 10 records will be skipped and is correct.
-            var list = query.Skip((pageSize * pageNumber) - pageSize).Take(pageSize).ToList();
+            //var list = query.Skip((pageSize * pageNumber) - pageSize).Take(pageSize).ToList();
 
             // Map dbo to DTO
-            var results = Mapper.Map<List<CustomerDto>>(list);
+            var results = Mapper.Map<List<CustomerDto>>(query);
 
             // Return custom object
             return new CustomerPage

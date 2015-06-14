@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Based.DataAccess.Interfaces;
+﻿using Based.DataAccess.Interfaces;
 using Based.DataAccess.Models;
 using SharpRepository.Repository;
 

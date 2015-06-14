@@ -11,7 +11,7 @@ namespace Based.DataAccess
         public override void Load()
         {
             Bind<IDetail>().To<Detail>();
-            Bind<DbContext>().To<DemoDb>();
+            Bind<DbContext>().To<DemoDbContext>();
         }
     }
 }
