@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Messaging;
-using System.Net.Http.Formatting;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
-using System.Threading;
-using System.Transactions;
-using Based.Messaging.Formatters;
 using Based.Messaging.Utilities;
 
 namespace Based.Messaging
