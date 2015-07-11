@@ -5,6 +5,7 @@ using System.Linq;
 using AutoMapper;
 using Based.Business.Core;
 using Based.Business.Interfaces;
+using Based.DataAccess;
 using Based.DataAccess.Models;
 using SharpRepository.Repository;
 
@@ -18,7 +19,7 @@ namespace Based.Business.Customers
         /// Constructor injection
         /// </summary>
         /// <param name="details"></param>
-        public CustomerLogic(IRepository<Detail> details)
+        public CustomerLogic(DetailRepository details)
         {
             this.details = details;            
         }

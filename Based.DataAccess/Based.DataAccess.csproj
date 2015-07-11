@@ -77,6 +77,14 @@
     <Compile Include="Migrations\201506140207503_CreateDetailTable.Designer.cs">
       <DependentUpon>201506140207503_CreateDetailTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506201728491_BuildFix.cs" />
+    <Compile Include="Migrations\201506201728491_BuildFix.Designer.cs">
+      <DependentUpon>201506201728491_BuildFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506201811038_bullshit.cs" />
+    <Compile Include="Migrations\201506201811038_bullshit.Designer.cs">
+      <DependentUpon>201506201811038_bullshit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Detail.cs" />
     <Compile Include="Interfaces\IDetail.cs" />
@@ -84,7 +92,9 @@
     <Compile Include="Schemas\DemoDbMigrationHistorySchema.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +106,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506140207503_CreateDetailTable.resx">
       <DependentUpon>201506140207503_CreateDetailTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506201728491_BuildFix.resx">
+      <DependentUpon>201506201728491_BuildFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506201811038_bullshit.resx">
+      <DependentUpon>201506201811038_bullshit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
