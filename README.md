@@ -1,3 +1,2 @@
 # BasedProject
-Stub of a demos for webapi.
-## Playing with github..
+[![Build Status](https://travis-ci.org/dsbissett/BasedProject.svg?branch=master)](https://travis-ci.org/dsbissett/BasedProject)
