@@ -74,10 +74,6 @@
     <Compile Include="Migrations\201506201728491_BuildFix.Designer.cs">
       <DependentUpon>201506201728491_BuildFix.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201506201811038_bullshit.cs" />
-    <Compile Include="Migrations\201506201811038_bullshit.Designer.cs">
-      <DependentUpon>201506201811038_bullshit.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Detail.cs" />
     <Compile Include="Interfaces\IDetail.cs" />
@@ -102,9 +98,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506201728491_BuildFix.resx">
       <DependentUpon>201506201728491_BuildFix.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201506201811038_bullshit.resx">
-      <DependentUpon>201506201811038_bullshit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
